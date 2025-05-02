@@ -10,21 +10,21 @@
 
 127.0.0.1:8000/dbrqs/iowa/ # Generates map of no fly zones in iowa (POST !!RUN ONLY ONCE!!)
 
-127.0.0.1:8000/dbrqs/find_map_details/ # Gives details of a map (map data, no flies, partitions), need to give json of map_id and partition_type (0 regular decomposition, 1 half perimeter kd decomposition, 2 native kd decomposition) (POST)
+127.0.0.1:8000/dbrqs/find_map_details/ # Gives details of a map (map data, no flies, partitions), need to give json of map_id, partition_type, num_drones (0 regular decomposition, 1 half perimeter kd decomposition, 2 native kd decomposition) (POST)
 
 127.0.0.1:8000/dbrqs/map_details_no_partitions/ # Gives map details, allows for no partitions (POST)
 
 127.0.0.1:8000/dbrqs/no_flies_on_map/ # Gives no fly zones of a map, need to give json of map_id (GET)
 
-127.0.0.1:8000/dbrqs/partition_no_kd/ # Gives the partitions if you don't use a kd tree, super slow, need to give json of map_id (POST)
+127.0.0.1:8000/dbrqs/partition_no_kd/ # Gives the partitions if you don't use a kd tree, super slow, need to give json of map_id, num_drones (POST)
 
-127.0.0.1:8000/dbrqs/partition_kd_half/ # Gives partitions of a map based on half perimeters of no-fly zones with a kd tree, need to give json of map_id (POST)
+127.0.0.1:8000/dbrqs/partition_kd_half/ # Gives partitions of a map based on half perimeters of no-fly zones with a kd tree, need to give json of map_id, num_drones (POST)
 
-127.0.0.1:8000/dbrqs/partition_kd_native/ # Gives partitions of a map based on native kd generation, need to give json of map_id (POST)
+127.0.0.1:8000/dbrqs/partition_kd_native/ # Gives partitions of a map based on native kd generation, need to give json of map_id, num_drones (POST)
 
-127.0.0.1:8000/dbrqs/respond_to_event/ # Given a valid event within partitions, routes the corresponding drone to the event. Requires parameters: map_id, partition_type, event_long, event_lat (POST)
+127.0.0.1:8000/dbrqs/respond_to_event/ # Given a valid event within partitions, routes the corresponding drone to the event. Requires parameters: map_id, partition_type, num_drones, event_long, event_lat (POST)
 
-127.0.0.1:8000/dbrqs/get_drone_number/ # Meant to be used in cohesion with the respond_to_event to determine if a drone is moving on the frontend. Requires parameters: map_id, partition_type, event_long, event_lat (POST)
+127.0.0.1:8000/dbrqs/get_drone_number/ # Meant to be used in cohesion with the respond_to_event to determine if a drone is moving on the frontend. Requires parameters: map_id, partition_type, num_drones, event_long, event_lat (POST)
 
 127.0.0.1:8000/dbrqs/load_faa/ # Loads all FAA data (Post)
     MAP ID 1 = Iowa specific no fly zones
@@ -44,7 +44,7 @@
 }
 ```
 
-# Dockerized Version
+# Dockerized Version (WORKS BEST)
 - You will need an env file in backend/dronecontrol and backend/dronecontrol/dronecontrol. 
 - It will be the same file found here [env-file](https://drive.google.com/drive/u/2/folders/1anXl2_ohDmIr829HUEVQrobxA3JQmhjj)
 ``` To run the docker
