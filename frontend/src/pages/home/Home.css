@@ -1,0 +1,174 @@
+ /* Base styles */
+.homepage {
+    min-height: 100vh;
+    background-color: #ffffff;
+  }
+  
+  /* Hero Section */
+  .homepage {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Add a semi-transparent overlay to help text stand out against the globe */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+  
+  /* Ensure hero content is visible over the globe */
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 1.25rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .cta-button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* Features Section */
+  .features {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .features-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .feature-card {
+    background-color: rgba(255, 255, 255, 0.521);
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .feature-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .feature-icon {
+    width: 2rem;
+    height: 2rem;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-subtitle {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+  
+  .feature-content {
+    padding: 1.5rem;
+    color: #374151;
+    line-height: 1.5;
+  }
+  
+  /* How It Works Section */
+  .how-it-works {
+    background-color: rgba(255, 255, 255, 0.301);
+    padding: 4rem 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .how-it-works h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: black
+  }
+  
+  .steps-grid {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .steps-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .step {
+    text-align: center;
+  }
+  
+  .step-number {
+    background-color: #dbeafe;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+  }
+  
+  .step-number span {
+    color: #2563eb;
+    font-weight: 700;
+  }
+  
+  .step h3 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: black;
+  }
+  
+  .step p {
+    color: #4b5563;
+  }

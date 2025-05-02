@@ -1,0 +1,135 @@
+.plan-container {
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: rgb(0, 0, 0);
+}
+
+.input-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    width: 100%;
+    max-width: 250px;
+    background-color: rgba(255, 255, 255, 0.096);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    overflow-y: auto;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+    color: #333;
+}
+
+.coordinate-inputs {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.file-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.file-name {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.compute-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.compute-button:hover {
+    background-color: #0056b3;
+}
+
+.compute-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.map-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.generated-options {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Add styles for the refresh button */
+.refresh-button {
+    margin-left: 8px;
+    padding: 6px 12px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.refresh-button:hover {
+    background-color: #357ab8;
+}
+
+.refresh-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}

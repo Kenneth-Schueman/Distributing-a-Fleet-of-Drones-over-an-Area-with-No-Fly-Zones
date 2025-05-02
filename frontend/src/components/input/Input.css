@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "heading heading heading"
+    "map map map"
+    "nofly nofly nofly"
+    "drones drones drones"
+    "button button button";
+  gap: 20px;
+  padding: 20px;
+}
+
+.heading-section {
+  grid-area: heading;
+}
+
+.heading-section h2 p {
+  text-align: left;
+  margin-top: 0;
+}
+
+.map-section {
+  grid-area: map;
+}
+
+.map-section h3 {
+  text-align: left;
+  margin-top: 0;
+}
+
+.dimensions-section {
+  grid-area: dimensions;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.dimensions-section label {
+  grid-column: span 1;
+  align-self: center;
+}
+
+.dimensions-section input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.no-fly-section {
+  grid-area: nofly;
+}
+
+.no-fly-section h3 {
+  text-align: left;
+  margin-top: 0;
+}
+
+.no-fly-coordinates {
+  grid-area: dimensions;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.no-fly-coordinates input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.container button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: #0056b3;
+}
+
+.drones-section {
+  grid-area: drones;
+}
+
+.drones-section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.drones-section h3 {
+  text-align: left;
+  margin-top: 0;
+}
+
+.drones-section input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button-section {
+  grid-area: button;
+}
+
+.button-section div {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}

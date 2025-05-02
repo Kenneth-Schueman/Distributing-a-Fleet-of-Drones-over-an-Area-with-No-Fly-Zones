@@ -1,0 +1,23 @@
+#root {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+}
+
+.content-area {
+  flex: 1;
+  margin-left: 75px; 
+}

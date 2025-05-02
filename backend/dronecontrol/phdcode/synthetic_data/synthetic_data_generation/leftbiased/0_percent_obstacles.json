@@ -1,0 +1,32 @@
+{
+    "region": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    0.0,
+                    0.0
+                ],
+                [
+                    100.0,
+                    0.0
+                ],
+                [
+                    100.0,
+                    100.0
+                ],
+                [
+                    0.0,
+                    100.0
+                ],
+                [
+                    0.0,
+                    0.0
+                ]
+            ]
+        ]
+    },
+    "obstacles": [],
+    "total_obstacle_area": 0,
+    "target_obstacle_area": 0.0
+}

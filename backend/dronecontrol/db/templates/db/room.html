@@ -1,0 +1,54 @@
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>Algorithm Dump</title>
+    </head>
+
+    <body>
+        <textarea id="algorithm-log" cols="100" rows="20"></textarea><br>
+        <input id="algorithm-log-start" type="text" size="100"><br>
+        <input id="algorithm-log-submit" type="button" value="Enter">
+        {{ algo_room|json_script:"algo-room" }}
+        <script>
+            const roomName = JSON.parse(document.getElementById('algo-room').textContent);
+            const algoSocket = new WebSocket(
+                'ws://'
+                + window.location.host
+                + '/ws/db/'
+                + roomName
+                + '/'
+            )
+
+            algoSocket.onopen = function(e) {
+                document.querySelector('#algorithm-log').value += 'Algorithm display socket opened\n';
+            }
+
+            algoSocket.onmessage = function(e) {
+                const data = JSON.parse(e.data);
+                document.querySelector('#algorithm-log').value += (data.message + '\n');
+            }
+
+            algoSocket.onclose = function(e) {
+                console.error('Algorithm display socket closed unexpectedly');
+            }
+
+            document.querySelector('#algorithm-log-start').focus();
+            document.querySelector('#algorithm-log-start').onkeyup = function(e) {
+                if (e.key === 'Enter') {
+                    document.querySelector('#algorithm-log-submit').click();
+                }
+            };
+
+            document.querySelector('#algorithm-log-submit').onclick = function(e) {
+                const messageInputDom = document.querySelector('#algorithm-log-start');
+                const message = messageInputDom.value;
+                algoSocket.send(JSON.stringify({
+                    'message': message
+                }));
+                messageInputDom.value = '';
+            };
+        </script>
+    </body>
+
+</html>

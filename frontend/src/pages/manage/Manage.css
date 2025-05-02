@@ -1,0 +1,79 @@
+.manage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    gap: 16px;
+  }
+  
+  .manage-text {
+    text-align: center;
+  }
+  
+  .manage-text h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .manage-text p {
+    color: #666;
+  }
+  
+  .manage-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .manage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .manage-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  
+  .manage-header h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .manage-content {
+    flex-grow: 1;
+    color: #666;
+  }
+  
+  .manage-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+  
+  .manage-footer span {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .manage-view-button {
+    padding: 6px 12px;
+    border: 1px solid #007bff;
+    background-color: transparent;
+    color: #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

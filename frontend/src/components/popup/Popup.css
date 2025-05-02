@@ -1,0 +1,142 @@
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .loading-popup {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .loading-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  .loading-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .loading-spinner {
+    height: 32px;
+    width: 32px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #3498db;
+    border-radius: 50%;
+    margin-right: 12px;
+    animation: spin 1s linear infinite;
+  }
+  
+  .loading-message {
+    margin: 0;
+    color: #555;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* File Upload Popup Styles */
+  .file-upload-popup {
+    width: 500px;
+    max-width: 90%;
+  }
+  
+  .file-upload-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .file-input-container {
+    margin: 10px 0;
+  }
+  
+  .file-name {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #4a90e2;
+  }
+  
+  .file-upload-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn.primary {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .btn.primary:hover {
+    background-color: #357ab8;
+  }
+  
+  .btn.primary:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .btn.cancel {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .btn.cancel:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .btn.secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .btn.secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  .doc-link {
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+    align-self: center;
+  }
+  
+  .doc-link:hover {
+    text-decoration: underline;
+  }
+  
+  .target-file-status {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+  }
