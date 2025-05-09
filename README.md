@@ -2,7 +2,7 @@
 Distributing a fleet of drones over an area with no-fly zones
 
 ## Teams
-Frontend - Kenneth Schueman, Melani Hodge, Samuel Russett
+Frontend - Kenneth Schueman, Melani Hodge, Samuel Russett <br />s
 Backend - Nicholas Kokott, Everett Duffy, Cole Stuedeman
 
 ## Setup
