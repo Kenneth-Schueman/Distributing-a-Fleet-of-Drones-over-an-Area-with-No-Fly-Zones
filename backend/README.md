@@ -48,6 +48,7 @@
 - You will need an env file in backend/dronecontrol and backend/dronecontrol/dronecontrol. 
 - It will be the same file found here [env-file](https://drive.google.com/drive/u/2/folders/1anXl2_ohDmIr829HUEVQrobxA3JQmhjj)
 ``` To run the docker
+docker compose up --build //initial build
 docker compose run django-web python manage.py migrate //for first time running
 docker compose run django-web python manage.py test //runs tests
 docker compose up --build //to run whenever
