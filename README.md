@@ -7,6 +7,8 @@ Backend - Nicholas Kokott, Everett Duffy, Cole Stuedeman
 
 ## Setup
 Both backend and frontend have their own readme.md describing how to setup each <br />
+Frontend: https://github.com/Kenneth-Schueman/Distributing-a-Fleet-of-Drones-over-an-Area-with-No-Fly-Zones/blob/main/frontend/README.md <br/>
+Backend: https://github.com/Kenneth-Schueman/Distributing-a-Fleet-of-Drones-over-an-Area-with-No-Fly-Zones/blob/main/backend/README.md <br>
 For design document: https://sdmay25-21.sd.ece.iastate.edu/4920%20Deliverables/Final%20Design%20Document.pdf
 
 ## Data sets
