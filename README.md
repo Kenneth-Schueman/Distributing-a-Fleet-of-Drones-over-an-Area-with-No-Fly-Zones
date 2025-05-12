@@ -16,7 +16,9 @@ Both the frontend and backend have their own separate setup guides:
 
 * **Frontend Setup**: [Frontend README](https://github.com/Kenneth-Schueman/Distributing-a-Fleet-of-Drones-over-an-Area-with-No-Fly-Zones/blob/main/frontend/README.md)
 * **Backend Setup**: [Backend README](https://github.com/Kenneth-Schueman/Distributing-a-Fleet-of-Drones-over-an-Area-with-No-Fly-Zones/blob/main/backend/README.md)
-* **Design Document**: [Final Design Document](https://sdmay25-21.sd.ece.iastate.edu/4920%20Deliverables/Final%20Design%20Document.pdf)
+* **Design Document**: [Final Design Document](https://drive.google.com/file/d/1yyZStqr8AKoW9y-TIrfEap8U1SzSDmf5/view?usp=sharing)
+* **Project Presentation**: [Final Presentation](https://drive.google.com/file/d/1GU3XC9WtVRUO3LEWNYA3Xqpujl2iiTe8/view?usp=sharing)
+* **Video Demo**: [Video Walk Through](https://drive.google.com/file/d/13t1gSYG-f0M9cN2HGAqMeh20XDqe7gHt/view?usp=sharing)
 
 ## Data Sources
 
