@@ -174,12 +174,16 @@ docker compose up --build     # Run the application
 To run tests:
 
 ```bash
+docker compose run django-web python manage.py test   # if running django do this
+
 python manage.py test
 ```
 
 For specific test classes:
 
 ```bash
+docker compose run django-web python manage.py test db.tests.(nameOfTest)  # if running django do this
+
 python manage.py test db.tests.(test_name)
 ```
 
