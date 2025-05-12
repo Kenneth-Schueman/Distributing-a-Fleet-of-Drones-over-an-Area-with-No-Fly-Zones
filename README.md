@@ -106,6 +106,22 @@ This React TypeScript application allows users to plan and simulate drone operat
 * **No-Fly Zones in Iowa**: `127.0.0.1:8000/dbrqs/iowa/`
 * **Partitioning Algorithms**: Multiple POST endpoints for different partitioning methods.
 
+### .env Setup
+- Need to place in both backend/dronecontrol and backend/dronecontrol/dronecontrol
+- Example .env file
+```
+SECRET_KEY=randomly_generated_key        # can be found online just lookup django key generator
+DEBUG=True
+DJANGO_LOGLEVEL=info
+DJANGO_ALLOWED_HOSTS=localhost,127.0.0.2
+DB_ENGINE=postgresql_psycopg2
+DB_NAME=YOUR_DB_NAME                     # if in docker can be anything you want
+DB_USER=YOUR_USER_NAME                   # if in docker can be anything you want
+DB_PASSWORD=YOUR_PASSWORD                # if in docker can be anything you want
+DB_HOST=localhost
+DB_PORT=5432
+```
+
 ### Docker Setup
 
 To run the backend in a Docker container:
