@@ -43,8 +43,23 @@
     "partition_type": (char type here, just an int of 0, 1, 2 for storage sake)
 }
 ```
+# .env files and locations
+- One will need to be in backend/dronecontrol other in backend/dronecontrol/dronecontrol
+- Example .env file
+```
+SECRET_KEY=random_generated_django_key
+DEBUG=True
+DJANGO_LOGLEVEL=info
+DJANGO_ALLOWED_HOSTS=localhost,127.0.0.2
+DB_ENGINE=postgresql_psycopg2
+DB_NAME=YOUR_DB_NAME            # if in docker can be whatever
+DB_USER=YOUR_USER_NAME          # if in docker can be whatever
+DB_PASSWORD=YOUR_PASSWORD       # if in docker can be whatever
+DB_HOST=localhost
+DB_PORT=5432
+```
 
-# Dockerized Version (WORKS BEST)
+# Dockerized Version (WORKS BEST and only need to run these commands)
 - You will need an env file in backend/dronecontrol and backend/dronecontrol/dronecontrol. 
 - It will be the same file found here [env-file](https://drive.google.com/drive/u/2/folders/1anXl2_ohDmIr829HUEVQrobxA3JQmhjj)
 ``` To run the docker
@@ -161,7 +176,7 @@ INSTALLED_APPS = [
 
 - If it doesn't display in pgAdmin4 right away just reboot it, sometimes it doesn't push through properly
 
-# Download and utilize Docker for REDIS
+# Download and utilize Docker for REDIS (Only for non docker build)
 - We need to utilize this server to store key pairs between the user and the backend for websocket communication.
 
 - If you don't have docker: [Docker Desktop](https://www.docker.com/products/docker-desktop/)
@@ -175,6 +190,13 @@ docker run --rm -p 6379:6379 redis:7
 - To run tests, cd into ./backend/dronecontrol.
 
 - Make sure the environment is created in this directory and activated and requirements are installed.
+- Docker Version
+```
+docker compose run django-web python manage.py test
+
+docker compose run django-web python manage.py test db.tests.(nameOfTest) #individual test
+```
+- Non docker version
 ```
 python install -r requirements.txt
 
